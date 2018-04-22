@@ -1,0 +1,29 @@
+<% include shared/header.ejs %>
+  <div class="container">
+    <h1>Register</h1>
+
+    <form method="post">
+      <fieldset class="form-group">
+        <label for="username" class="col-sm-2 control-label">Username (E-mail Address): *</label>
+        <input class="form-control" name="username" id="username" type="email" required />
+      </fieldset>
+      <fieldset class="form-group">
+        <label for="password" class="col-sm-2 control-label">Password: *</label>
+        <input class="form-control" name="password" id="password" type="password" required />
+      </fieldset>
+      <fieldset class="form-group">
+        <label for="confirm" class="col-sm-2 control-label">Confirm: *</label>
+        <input class="form-control" name="confirm" id="confirm" type="password" required />
+      </fieldset>
+      <fieldset class="form-group">
+        <button class="btn btn-success">Register</button>
+        <hr /> Already have an account?
+        <a href="/login" title="Login">Login</a>
+  </div>
+  </form>
+
+  </div>
+
+
+
+  <% include shared/footer.ejs %>

@@ -1,0 +1,22 @@
+<% include shared/header.ejs %>
+
+  <h1>Forgot Password</h1>
+
+  <form method="post">
+    <div class="form-group">
+      <label for="username" class="col-sm-2 control-label">Username (E-mail)</label>
+      <input name="username" id="username" class="form-control col-sm-2" type="email" aria-describedby="usernameHelp" placeholder="Enter your username (email)"
+        required />
+    </div>
+    <div class="col-12">
+      <div class="row">
+        <button class="btn btn-warning col-1">Reset Password</button>
+      </div>
+      <!-- .row -->
+    </div>
+    <hr />
+    <p>Not signed up? Please
+      <a href="/register" title="Register">Register</a> first! </p>
+  </form>
+
+  <% include shared/footer.ejs %>
