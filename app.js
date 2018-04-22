@@ -12,6 +12,7 @@ var nodemailer = require('nodemailer');
 var passport = require('passport');
 var session = require('express-session');
 var localStrategy = require('passport-local').Strategy;
+var flash = require('connect-flash');
 var bcrypt = require('bcrypt-nodejs');
 var async = require('async');
 var crypto = require('crypto');
@@ -42,6 +43,8 @@ app.use(session({
   resave: true, //to refresh
   saveUninitialized: false // we don't need a session if the user is not logged in
 }));
+
+app.use(flash());
 
 // session management for users
 app.use(passport.initialize());

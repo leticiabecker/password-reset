@@ -10,9 +10,7 @@ const User = require('../models/user');
 var async = require('async');
 var nodemailer = require('nodemailer');
 var crypto = require("crypto");
-
-
-
+var flash = require('connect-flash');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
@@ -95,6 +93,7 @@ router.post('/forgot', function (req, res, next) {
       }, function (err, user) {
         if (!user) {
           // req.flash('error', 'No account with that email address exists.');
+          console.log('error', 'No account with that email address exists.');
           return res.redirect('/forgot');
         }
 
